@@ -172,3 +172,4 @@ output/*
 scripts/checkpoints
 scripts/gfpgan/
 **.h5
+**.pkl

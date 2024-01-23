@@ -1,0 +1,99 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import ipywidgets as wd
+
+import pickle
+
+file_rls = r'./video/a2c_b1_i.pkl'
+with open(file_rls, 'rb') as file:
+    data = my_list = pickle.load(file)
+
+print(len(my_list))
+
+file_rls = r'./video/a2c_b1_a.pkl'
+with open(file_rls, 'rb') as file:
+    dataa = my_lista = pickle.load(file)
+
+# my_list = [x for j in my_list for x in j ]
+x = my_list
+
+# x = [image_array]
+fig = plt.figure()
+viewer = fig.add_subplot(111)
+plt.ion()
+fig.show()
+
+text = ''
+for i in range(len(x)):
+    viewer.clear()
+
+    if dataa[i]==0 :
+        if text.startswith('right'):
+            text += '1'
+        else:
+            text = 'right'
+        plt.text(50, 50, text, fontsize=12, color='red')
+    if dataa[i]==1 :
+        if text.startswith('middle'):
+            text += '1'
+        else:
+            text = 'middle'
+        plt.text(50, 50, text, fontsize=12, color='grey')
+    if dataa[i] == 2:
+        if text.startswith('left'):
+            text += '1'
+        else:
+            text = 'left'
+        plt.text(50, 50, text, fontsize=12, color='blue')
+
+    viewer.imshow(x[i])
+
+    plt.pause(.003)
+    fig.canvas.draw()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

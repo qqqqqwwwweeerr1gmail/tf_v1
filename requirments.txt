@@ -1,0 +1,17 @@
+tensorflow==1.14
+pandas
+matplotlib
+pydot
+pydotplus
+# graphviz
+keras==2.3.1
+gym
+sklearn
+gym[classic_control]
+ffmpeg
+pyvirtualdisplay
+pyopengl
+pyglet
+opencv-python
+ipywidgets
+torch

@@ -1,0 +1,7 @@
+you are perfectly done the brain job, it can learn to operate its hand automatically.
+brain generate 4 vector signal as his will, and 3 vector signal output as command to his hand.
+this time. we add another task:
+    the option from brain is not only itself , but afect by current state , current state now simply defined as last
+output, this time output is no longer output itself , but output from brain add last time output state, therefore,
+the brain take action not only by its will but should consider state, make the output fit target vector. add print
+input state before the 'brain output'

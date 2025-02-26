@@ -12,7 +12,7 @@ from time import time
 import keras
 from keras.layers import Dense
 
-from main.b1_game import game
+from DQN.main.b1_game import game
 
 
 class DQN_agent:

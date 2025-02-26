@@ -28,8 +28,8 @@ def play_a(ag,game):
     return r_list, c_list
 
 if __name__ == '__main__':
-    from main.b3_q_learning_agent import dqn_ag
-    from main.b1_game import game
+    from DQN.main.b3_q_learning_agent import dqn_ag
+    from DQN.main.b1_game import game
 
     r_list, c_list = play_a(dqn_ag,game)
     print(dqn_ag.a_counter)

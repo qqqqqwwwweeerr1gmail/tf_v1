@@ -62,13 +62,18 @@ def game_play():
             else:
                 next_state = np.copy(game.board)
                 next_state_max_q_value = q_table[state_to_str(next_state)].max()
-            q_table.loc[action, state_to_str(state1)] = reward + gamma * next_state_max_q_value
+
+            q_value_new = reward + gamma * next_state_max_q_value
+            q_value_previous_next = q_table.loc[action, state_to_str(state1)]
+            if not q_value_previous_next < q_value_new:
+                # 永远记住惨痛教训, 不能好了伤疤忘了疼
+                q_table.loc[action, state_to_str(state1)] = reward + gamma * next_state_max_q_value
 
             state = state1
         r_list.append(total_reward)
     # print(q_table.to_list())
 
-    q_table.to_excel('q_table2.xlsx')
+    q_table.to_excel('q_table3.xlsx')
     # q_table.to_excel('q_table.xlsx')
 
 if __name__ == '__main__':

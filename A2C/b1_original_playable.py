@@ -14,7 +14,6 @@ num_of_actions = env.action_space.n
 end_game_reward = 100
 
 
-
 class VNetwork:
     def __init__(self, hidden_layers_size, gamma, learning_rate, input_size):
         self.v_target = tf.placeholder(shape=None, dtype=tf.float32, name='dvn_v_target')

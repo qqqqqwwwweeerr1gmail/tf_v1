@@ -1,0 +1,18 @@
+brain generate action vector, but his action vector will is not the output command vector to operate his hand,
+let's define 10 different kinds of option the interactor wanna to, and represent as 4 dim vector , and his hand input
+is 3 dim vector ,
+   like this : [0.00, 0.00, 0.00]
+               [1.00, 0.00, 0.00]
+               [0.00, 1.00, 0.00]
+               [0.00, 0.00, 1.00]
+               [0.50, 0.50, 0.00]
+               [0.00, 0.50, 0.50]
+               [0.50, 0.00, 0.50]
+               [1.00, 1.00, 0.00]
+               [0.00, 1.00, 1.00]
+               [1.00, 0.00, 1.00]
+your task is :
+        define action will vector, define neurons structure , generate train data, train model , evaluate it.
+second task:
+        his body will transfer when time passing by. it means that the hand input vector will change, and it will not
+        notice the brain , therefore, when brain infer, automatically calculate loss and renew model

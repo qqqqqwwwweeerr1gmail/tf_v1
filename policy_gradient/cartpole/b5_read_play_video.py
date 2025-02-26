@@ -22,7 +22,7 @@ fig.show()
 for i in range(len(x)):
     viewer.clear()
     viewer.imshow(x[i])
-    plt.pause(.1)
+    plt.pause(.02)
     fig.canvas.draw()
 
 
